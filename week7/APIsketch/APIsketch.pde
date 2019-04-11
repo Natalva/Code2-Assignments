@@ -19,7 +19,14 @@ void setup (){
 
 
 void draw(){
+  background(255);
   for(int i = 0; i<100; i++){
+    fill(255);
     rect(i*5, height/2-AirValue[i], 4, AirValue[i]);
+    //HOVER TEXT BOUNDARY CHECK !!
+  if ( mouseX > i*5 && mouseX < 4+i*5 && mouseY> height/2-AirValue[i] && mouseY < AirValue[i] + height/2-AirValue[i]){
+    fill(0);
+    text (AirValue[i], i*5,height/2+20);
+  }
   } 
 }
