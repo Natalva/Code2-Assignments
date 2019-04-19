@@ -4,6 +4,7 @@ Table data;
 
 void setup() {
   size(600,600);
+  colorMode (HSB, 255);
   data = loadTable("data.csv", "header");
   
   for (int i = 0; i < data.getRowCount(); i++) {
@@ -11,7 +12,10 @@ void setup() {
     int x = row.getInt("x");
     int y = row.getInt("y");
     int size = row.getInt("size");
+    int hue = row.getInt("hue");
+    fill(hue,120,200);
     ellipse(x, y, size, size);
+    
   }
 }
 
