@@ -9,6 +9,7 @@ void setup() {
 void draw() {
   background(255);
   fill(0);
+  
   switch (scene) {
   case 0:
     ellipse(200, 200, 100, 100);
@@ -20,28 +21,36 @@ void draw() {
     triangle(0, 0, width, 0, width/2, height);
     break;
   case 3:
-    text("fin", 100, 100);
+    text("bye", 100, 100);
     break;
   default:
     break;
   }
-  if (keyPressed) { 
+  
+  if (keyPressed && scene == 0) { 
     switch (scene) {
     case 0:
       advance();
+      break;
     case 1:
+    }
+  }
 
-      //hm, not working. I tried also having it be scene+1, 
-      //and putting all the switch code in both, but that didn't work either
-    } 
-    if (mousePressed) { 
-      switch (scene) { 
-
-      case 2:
-        advance();
-        break;
-      case 3:
-      }
+  if (mousePressed) { 
+    switch (scene) { 
+    case 1:
+      advance();
+      break;
+    case 2:
+    }
+  }
+  
+  if (keyPressed && scene == 2) { 
+    switch (scene) { 
+    case 2:
+      advance();
+      break;
+    case 3:
     }
   }
 }

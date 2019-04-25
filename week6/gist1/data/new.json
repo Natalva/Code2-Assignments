@@ -1,0 +1,17 @@
+[
+  {
+    "option target": "{1, 2}",
+    "description": "You wake up in Miami and don't know what is going on",
+    "option": "you need to dance, you make a friend"
+  },
+  {
+    "option target": "{0, 0}",
+    "description": "Lets dance!",
+    "option": "shake it, "
+  },
+  {
+    "option target": "{1, 0}",
+    "description": "go to the beach",
+    "option": "steal a motorcycle, enjoy the dance battle"
+  }
+]
